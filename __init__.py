@@ -13,3 +13,5 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "EagleFeederAnimatedWebp": "EagleFeeder (AnimatedWEBP)",
     "EagleFeederMp4": "EagleFeeder (MP4)",
 }
+
+WEB_DIRECTORY = "./web/js"

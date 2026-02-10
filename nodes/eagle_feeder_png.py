@@ -18,6 +18,7 @@ class EagleFeederPng(EagleFeederBase):
                 "folder_name": ("STRING", {"default": ""}),
                 "eagle_host": ("STRING", {"default": "http://localhost:41595"}),
                 "eagle_token": ("STRING", {"default": ""}),
+                "file_server_host": ("STRING", {"default": "localhost"}),
                 "embed_workflow": ("BOOLEAN", {"default": True}),
             },
             "hidden": {"prompt": "PROMPT", "extra_pnginfo": "EXTRA_PNGINFO"},
@@ -32,6 +33,7 @@ class EagleFeederPng(EagleFeederBase):
         folder_name: list[str],
         eagle_host: list[str],
         eagle_token: list[str],
+        file_server_host: list[str],
         embed_workflow: list[bool],
         prompt: list,
         extra_pnginfo: list,
@@ -40,6 +42,7 @@ class EagleFeederPng(EagleFeederBase):
         folder_name = folder_name[0]
         eagle_host = eagle_host[0]
         eagle_token = eagle_token[0]
+        file_server_host = file_server_host[0]
         embed_workflow = embed_workflow[0]
         prompt = prompt[0]
         extra_pnginfo = extra_pnginfo[0]
@@ -67,6 +70,6 @@ class EagleFeederPng(EagleFeederBase):
                 image.save(file_path, format="PNG")
 
             tag_list = tags[idx].split(",")
-            self.eagle_api.add_from_url(file_name, tag_list, folder_id)
+            self.eagle_api.add_from_url(file_name, tag_list, folder_id, file_server_host)
 
         return {}

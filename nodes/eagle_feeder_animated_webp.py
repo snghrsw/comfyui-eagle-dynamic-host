@@ -19,6 +19,7 @@ class EagleFeederAnimatedWebp(EagleFeederBase):
                 "folder_name": ("STRING", {"default": ""}),
                 "eagle_host": ("STRING", {"default": "http://localhost:41595"}),
                 "eagle_token": ("STRING", {"default": ""}),
+                "file_server_host": ("STRING", {"default": "localhost"}),
                 "embed_workflow": ("BOOLEAN", {"default": True}),
                 "fps": (
                     "FLOAT",
@@ -38,6 +39,7 @@ class EagleFeederAnimatedWebp(EagleFeederBase):
         folder_name: str,
         eagle_host: str,
         eagle_token: str,
+        file_server_host: str,
         embed_workflow: bool,
         fps: float,
         lossless: bool,
@@ -83,6 +85,6 @@ class EagleFeederAnimatedWebp(EagleFeederBase):
             )
 
         tag_list = tags.split(",")
-        self.eagle_api.add_from_url(file_name, tag_list, folder_id)
+        self.eagle_api.add_from_url(file_name, tag_list, folder_id, file_server_host)
 
         return {}
