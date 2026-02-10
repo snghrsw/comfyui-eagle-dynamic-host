@@ -1,4 +1,6 @@
-# ComfyUI Eagle Feeder
+# ComfyUI Eagle Dynamic Host
+
+> This is a modified version of [comfyui-eagle-feeder](https://github.com/tighug/comfyui-eagle-feeder) by [tighug](https://github.com/tighug).
 
 [[日本語]](./README_JP.md)
 
@@ -12,16 +14,12 @@ It temporarily launches a local file server and sends images to Eagle using the 
 
 ## Installation
 
-### ComfyUI Manager
-
-Search for `ComfyUI Eagle Feeder`.
-
 ### Manual
 
 Clone the repository into your `custom_nodes` directory:
 
 ```bash
-git clone https://github.com/tighug/comfyui-eagle-feeder.git
+git clone https://github.com/snghrsw/comfyui-eagle-dynamic-host.git
 ```
 
 ## Usage

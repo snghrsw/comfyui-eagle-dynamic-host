@@ -1,4 +1,6 @@
-# ComfyUI Eagle Feeder
+# ComfyUI Eagle Dynamic Host
+
+> このプロジェクトは [comfyui-eagle-feeder](https://github.com/tighug/comfyui-eagle-feeder)（[tighug](https://github.com/tighug) 作）を一部修正したものです。
 
 [[English]](./README.md)
 
@@ -12,16 +14,12 @@ ComfyUI 上で[Eagle](./https://jp.eagle.cool/)に画像を送信するための
 
 ## Installation
 
-### ComfyUI Manager
-
-`ComfyUI Eagle Feeder`で検索してください。
-
 ### Manual
 
 `custom_nodes`ディレクトリ内にクローンしてください。
 
 ```bash
-git clone　https://github.com/tighug/comfyui-eagle-feeder.git
+git clone https://github.com/snghrsw/comfyui-eagle-dynamic-host.git
 ```
 
 ## Usage
