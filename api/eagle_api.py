@@ -18,10 +18,10 @@ class EagleAPI:
             logger.error(response.text)
         return response.json()["data"]
 
-    def add_from_url(self, file_name: str, tag_list: list[str], folder_id: str) -> None:
+    def add_from_url(self, file_name: str, tag_list: list[str], folder_id: str, file_server_host: str = "localhost") -> None:
         url = self.base_url + "/item/addFromURL"
         headers = {"Content-Type": "application/json"}
-        src_url = f"http://localhost:{FILE_SERVER_PORT}/{file_name}"
+        src_url = f"http://{file_server_host}:{FILE_SERVER_PORT}/{file_name}"
         json = {
             "url": src_url,
             "name": file_name,
